@@ -1,5 +1,5 @@
-# Escáner2030
-Escáner 2030 - España
+# EscaneaODS
+EscaneaODSCooperacion
 
 ## Requirements
 
@@ -8,8 +8,8 @@ NodeJS > 10.0
 ## Setup
 
 ```
-git clone https://github.com/politicalwatch/escaner2030.es.git
-cd escaner2030.es
+git clone https://github.com/politicalwatch/escaneaods.git
+cd escaneaods
 npm install
 cp src/config/index.js.example src/config/index.js
 ```

@@ -1,5 +1,5 @@
 export default {
-  SHORTNAME: process.env.VUE_APP_SHORTNAME || 'p2030',
+  SHORTNAME: process.env.VUE_APP_SHORTNAME || 'escaneaods',
   URL: process.env.VUE_APP_BACKEND_URL || 'http://localhost:5000',
   USE_ALERTS: process.env.VUE_APP_USE_ALERTS || false,
   MENU: [
@@ -19,19 +19,19 @@ export default {
   },
   LOGO: '/img/logo.png',
 
-  DEFAULT_PAGE_TITLE: 'Escáner2030 - Escanea cualquier texto en clave ODS',
+  DEFAULT_PAGE_TITLE: 'EscaneaODS - Escanea cualquier texto en clave ODS',
   DEFAULT_METATAGS: [
     {
       name: 'description',
-      content: 'Escáner2030 analiza y etiqueta en segundos cualquier texto que le proporciones en clave de Agenda 2030, ofreciendo visualizaciones sobre la presencia de los diferentes Objetivos de Desarrollo Sostenible (ODS).'
+      content: 'EscaneaODS analiza y etiqueta en segundos cualquier texto que le proporciones en clave de Agenda 2030, ofreciendo visualizaciones sobre la presencia de los diferentes Objetivos de Desarrollo Sostenible (ODS).'
     },
     {
       name: 'keywords',
-      content: 'Agenda 2030, ODS, Objetivos de Desarrollo Sostenible, Escáner2030, Naciones Unidas'
+      content: 'Agenda 2030, ODS, Objetivos de Desarrollo Sostenible, EscaneaODS, Naciones Unidas'
     },
     {
       itemprop: 'image',
-      content: 'http://escaner2030.es/img/logo.png'
+      content: 'http://escaneaodscooperacion.es/img/logo.png'
     },
     {
       name: 'twitter:card',
@@ -39,15 +39,15 @@ export default {
     },
     {
       name: 'twitter:url',
-      content: 'http://escaner2030.es'
+      content: 'http://escaneaodscooperacion.es'
     },
     {
       name: 'twitter:title',
-      content: 'Escáner2030 - Escanea cualquier texto en clave ODS'
+      content: 'EscaneaODS - Escanea cualquier texto en clave ODS'
     },
     {
       name: 'twitter:description',
-      content: 'Escáner2030 analiza y etiqueta en segundos cualquier texto que le proporciones en clave de Agenda 2030, ofreciendo visualizaciones sobre la presencia de los diferentes Objetivos de Desarrollo Sostenible (ODS).'
+      content: 'EscaneaODS analiza y etiqueta en segundos cualquier texto que le proporciones en clave de Agenda 2030, ofreciendo visualizaciones sobre la presencia de los diferentes Objetivos de Desarrollo Sostenible (ODS).'
     },
     {
       name: 'twitter:creator',
@@ -55,11 +55,11 @@ export default {
     },
     {
       name: 'twitter:image:src',
-      content: 'http://escaner2030.es/img/logo.png'
+      content: 'http://escaneaodscooperacion.es/img/logo.png'
     },
     {
       property: 'og:title',
-      content: 'Escáner2030 - Escanea cualquier texto en clave ODS'
+      content: 'EscaneaODS - Escanea cualquier texto en clave ODS'
     },
     {
       property: 'og:type',
@@ -67,19 +67,19 @@ export default {
     },
     {
       property: 'og:url',
-      content: 'https://www.escaner2030.es'
+      content: 'https://www.escaneaodscooperacion.es'
     },
     {
       property: 'og:image',
-      content: 'http://escaner2030.es/img/logo.png'
+      content: 'http://escaneaodscooperacion.es/img/logo.png'
     },
     {
       property: 'og:description',
-      content: 'Escáner2030 analiza y etiqueta en segundos cualquier texto que le proporciones en clave de Agenda 2030, ofreciendo visualizaciones sobre la presencia de los diferentes Objetivos de Desarrollo Sostenible (ODS).'
+      content: 'EscaneaODS analiza y etiqueta en segundos cualquier texto que le proporciones en clave de Agenda 2030, ofreciendo visualizaciones sobre la presencia de los diferentes Objetivos de Desarrollo Sostenible (ODS).'
     },
     {
       property: 'og:site_name',
-      content: 'Escáner2030'
+      content: 'EscaneaODS'
     },
   ],
   STYLES: {

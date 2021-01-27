@@ -5,7 +5,7 @@
 
         <div class="o-grid u-margin-bottom-4">
           <div class="o-grid__col u-12 u-6@sm">
-            <tipi-message type="info" icon><div v-html="'Escáner2030 te permite detectar y visualizar la presencia de los diferentes Objetivos de Desarrollo Sostenible (ODS) en cualquier texto.'"></div></tipi-message>
+            <tipi-message type="info" icon><div v-html="'EscaneaODS.C~ te permite detectar y visualizar la presencia de los diferentes Objetivos de Desarrollo Sostenible (ODS) en los textos Cooperación al Desarrollo. Se trata  de una herramienta adaptada al lenguaje de la Cooperación española.'"></div></tipi-message>
           </div>
 
           <div class="o-grid__col u-12 u-6@sm">

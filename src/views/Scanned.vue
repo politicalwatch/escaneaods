@@ -19,7 +19,7 @@
             <div class="o-grid o-grid--wide o-grid--center u-bg-primary-light u-padding-top-8 u-padding-bottom-8 u-margin-top-8">
               <div class="o-grid__col u-12 u-12@xs u-10@sm u-text-center">
                 <h5>Escanea otro documento</h5>
-                <p>Escáner 2030 te permite cargar y etiquetar todos los documentos que necesites en clave de Agenda 2030, así como realizar comparaciones con los documentos almacenados en nuestra base de datos.</p>
+                <p>EscaneaODS te permite cargar y etiquetar todos los documentos que necesites en clave de Agenda 2030, así como realizar comparaciones con los documentos almacenados en nuestra base de datos.</p>
                 <router-link :to="{name:'scanner'}" class="c-button c-button--primary">Escanear</router-link>
               </div>
             </div>

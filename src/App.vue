@@ -3,7 +3,7 @@
     <transition name="fade" mode="out-in">
       <div>
         <tipi-navbar pre-image="/img/multicolor.jpg" :links="MENU" :logo="LOGO" />
-          <router-view/>
+        <router-view/>
         <footer-block />
       </div>
     </transition>

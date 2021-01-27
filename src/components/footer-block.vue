@@ -11,8 +11,14 @@
           <div class="o-grid__col u-8@sm u-offset-1@sm u-margin-top-4">
             <p class="u-text-overline">Con el apoyo de</p>
             <div class="o-grid">
-              <div class="o-grid__col u-7@sm">
+              <div class="o-grid__col u-6@sm">
                 <a href="http://www.exteriores.gob.es/Portal/es/Ministerio/SecretariosDeEstado/SecretariaDeEstadoCooperacionInternacional/Paginas/Inicio.aspx" target="_blank"><img src="/img/maeuec-seci.jpg" class="big" alt="Logo de la Secretaria de Estado de Cooperación (Ministerio de Asuntos Exteriores, Unión Europea y Cooperación) del Gobierno de España"></a>
+              </div>
+              <div class="o-grid__col u-3@sm">
+                <a href="https://cooperacionespanola.es/es/direccion-general-de-politicas-de-desarrollo-sostenible" target="_blank"><img src="/img/logo_cooperacion.jpg" class="big" alt="Logo de Cooperación Española"></a>
+              </div>
+              <div class="o-grid__col u-3@sm">
+                <a href="https://www.agenda2030.gob.es/" target="_blank"><img src="/img/logo_agenda.jpg" class="big" alt="Logo de la Secretaría de Estado para la Agenda 2030."></a>
               </div>
             </div>
           </div>

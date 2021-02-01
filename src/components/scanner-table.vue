@@ -7,6 +7,7 @@
           <th>Meta</th>
           <th>Etiqueta</th>
           <th>Apariciones</th>
+          <th>Líneas de acción</th>
         </tr>
       </thead>
       <tbody>
@@ -15,6 +16,7 @@
           <td data-label="Subtopic">{{d.subtopic}}</td>
           <td data-label="Etiqueta">{{d.tag}}</td>
           <td data-label="Ocurrencias">{{d.times}}</td>
+          <td data-label="Líneas de acción">{{d.course_of_action}}</td>
         </tr>
       </tbody>
     </table>

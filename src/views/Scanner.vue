@@ -166,7 +166,15 @@ export default {
         }
       })
         .then(({ value }) => {
-          api.saveScanned(value.name, value.expiry, this.excerptText, this.result)
+          let result = this.result
+          delete result.courses_of_action
+          for (const key in result.tags) {
+            let tag = result.tags[key]
+            delete tag.course_of_action
+            result.tags[key] = tag
+          }
+
+          api.saveScanned(value.name, value.expiry, this.excerptText, result)
             .then(response => {
 
               swal({

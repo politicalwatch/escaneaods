@@ -20,6 +20,7 @@
         </tr>
       </tbody>
     </table>
+  </div>
 </template>
 
 <script>

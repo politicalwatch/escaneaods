@@ -1,7 +1,7 @@
 export default {
-  SHORTNAME: import.meta.env.VUE_APP_SHORTNAME || 'escaneaods',
-  URL: import.meta.env.VUE_APP_BACKEND_URL || 'http://localhost:5000',
-  USE_ALERTS: import.meta.env.VUE_APP_USE_ALERTS || false,
+  SHORTNAME: import.meta.env.VITE_VUE_APP_SHORTNAME || 'escaneaods',
+  URL: import.meta.env.VITE_VUE_APP_BACKEND_URL || 'http://localhost:5000',
+  USE_ALERTS: import.meta.env.VITE_VUE_APP_USE_ALERTS || false,
   MENU: [
     {
       route: 'scanner',

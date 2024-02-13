@@ -1,9 +1,10 @@
 # EscaneaODS
+
 EscaneaODSCooperacion
 
 ## Requirements
 
-NodeJS > 10.0
+NodeJS > 18.0
 
 ## Setup
 
@@ -14,11 +15,10 @@ npm install
 cp src/config/index.js.example src/config/index.js
 ```
 
-Finally, edit *config/index.js* file with your specific values.
-
+Finally, edit _config/index.js_ file with your specific values.
 
 ## Run
 
 ```
-npm run serve
+npm run dev
 ```

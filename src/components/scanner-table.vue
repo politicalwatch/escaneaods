@@ -12,11 +12,11 @@
       </thead>
       <tbody>
         <tr v-for="(d, i) in datum" :key="i">
-          <td data-label="Topic">{{d.topic}}</td>
-          <td data-label="Subtopic">{{d.subtopic}}</td>
-          <td data-label="Etiqueta">{{d.tag}}</td>
-          <td data-label="Ocurrencias">{{d.times}}</td>
-          <td data-label="Líneas de acción">{{d.course_of_action}}</td>
+          <td data-label="Topic">{{ d.topic }}</td>
+          <td data-label="Subtopic">{{ d.subtopic }}</td>
+          <td data-label="Etiqueta">{{ d.tag }}</td>
+          <td data-label="Ocurrencias">{{ d.times }}</td>
+          <td data-label="Líneas de acción">{{ d.course_of_action }}</td>
         </tr>
       </tbody>
     </table>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { TipiMessage } from 'tipi-uikit';
+import { TipiMessage } from '@politicalwatch/tipi-uikit';
 
 export default {
   name: 'scanner-table',
@@ -50,20 +50,22 @@ export default {
   methods: {
     parseResults() {
       /**
-      * Map tags array to custom array
-      */
+       * Map tags array to custom array
+       */
       if (!this.result.tags) return;
 
-      const totaltags = this.result.tags
-        .reduce((cnt, o) => (cnt + o.times), 0);
+      const totaltags = this.result.tags.reduce((cnt, o) => cnt + o.times, 0);
 
       this.totalRows = this.result.tags.length;
 
-      this.datum = this.result.tags.map(d => {
-        const item = { ...d };
-        item.percent = Math.floor((d.times / totaltags)*100);
-        return item;
-      }).sort(d => d.times).slice(0, this.limitRows);
+      this.datum = this.result.tags
+        .map((d) => {
+          const item = { ...d };
+          item.percent = Math.floor((d.times / totaltags) * 100);
+          return item;
+        })
+        .sort((d) => d.times)
+        .slice(0, this.limitRows);
     },
   },
 };

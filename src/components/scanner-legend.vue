@@ -1,19 +1,22 @@
 <template>
-    <div class="legend">
-      <div v-for="(d, i) in sortedTopics" :key="i" class="legend__item">
-        <div
-          class="legend__img"
-          :style="{
-            'background-color': styles.topics[d].color,
-            'background-image': `url(/img/topics/${styles.topics[d].image})`,
-          }"></div>
-        <span class="legend__text c-topic-link__name u-color-secondary">{{d}}</span>
-      </div>
+  <div class="legend">
+    <div v-for="(d, i) in sortedTopics" :key="i" class="legend__item">
+      <div
+        class="legend__img"
+        :style="{
+          'background-color': styles.topics[d].color,
+          'background-image': `url(/img/topics/${styles.topics[d].image})`,
+        }"
+      ></div>
+      <span class="legend__text c-topic-link__name u-color-secondary">{{
+        d
+      }}</span>
     </div>
+  </div>
 </template>
 
 <script>
-import { Utils } from 'tipi-uikit';
+import { Utils } from '@politicalwatch/tipi-uikit';
 
 export default {
   name: 'scanner-legend',
@@ -34,12 +37,12 @@ export default {
   },
   computed: {
     sortedTopics() {
-      const topics = [ ...this.result.topics ];
+      const topics = [...this.result.topics];
       const sortedTopics = topics.sort(Utils.naturalSort);
       if (this.isFirst) {
-        return sortedTopics.slice(0, 8)
+        return sortedTopics.slice(0, 8);
       }
-      return sortedTopics.slice(8)
+      return sortedTopics.slice(8);
     },
   },
 };

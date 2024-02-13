@@ -1,27 +1,20 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from '@/router'
-import store from '@/store'
-import '../node_modules/tipi-uikit/src/styles/main.scss';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from '@/router';
+import { createPinia } from 'pinia';
+import VueGtag from 'vue-gtag';
+import '@politicalwatch/tipi-uikit/src/styles/main.scss';
 
-import * as Sentry from '@sentry/browser'
-import * as Integrations from '@sentry/integrations'
+const app = createApp(App);
+app.use(router);
+app.use(createPinia());
+app.use(
+  VueGtag,
+  {
+    config: { id: import.meta.env.VITE_GA_ID },
+    boootstrap: false,
+  },
+  router
+);
 
-import './registerServiceWorker'
-
-
-let SENTRY_DSN = process.env.VUE_APP_SENTRY_DSN
-if (SENTRY_DSN) {
-  Sentry.init({
-    dsn: SENTRY_DSN,
-    integrations: [new Integrations.Vue({Vue, attachProps: true})],
-  })
-}
-
-Vue.config.productionTip = false
-
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+app.mount('#app');

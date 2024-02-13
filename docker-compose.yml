@@ -2,10 +2,8 @@ version: "3.3"
 services:
   escaner-frontend:
     build: .
-    container_name: escaner-frontend
+    container_name: escaneaods-frontend
     restart: unless-stopped
-    env_file:
-      - .env.production
     ports:
       - 8070:80
     volumes:

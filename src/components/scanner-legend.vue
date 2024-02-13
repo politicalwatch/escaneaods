@@ -57,7 +57,7 @@ $width: 36px;
     height: $width;
     display: inline-block;
     vertical-align: top;
-    background-size: $width/1.5 $width/1.5;
+    background-size: calc($width/1.5) calc($width/1.5);
     background-repeat: no-repeat;
     background-position: center;
   }

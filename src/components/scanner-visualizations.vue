@@ -85,7 +85,7 @@
         type="xls"
         class="c-button c-button--icon-right c-button--primary"
       >
-        {{ $t('components.scannerVisualizations.detailed.button') }}
+        Descarga tus resultados
         <span class="c-icon c-icon--type-download">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -132,6 +132,7 @@ export default {
     ScannerTable,
     ScannerLegend,
     Multiselect,
+    JsonExcel,
   },
   props: {
     result: {

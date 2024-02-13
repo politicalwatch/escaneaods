@@ -1,7 +1,7 @@
-version: "3.3"
+version: '3.3'
 services:
   escaner-frontend:
-    build: .
+    image: politicalwatch/escaneaods:latest
     container_name: escaneaods-frontend
     restart: unless-stopped
     ports:

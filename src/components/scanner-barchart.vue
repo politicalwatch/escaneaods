@@ -1,10 +1,5 @@
 <template>
-  <D3BarChart
-    :config="config"
-    :datum="datum"
-    :height="height"
-    :download="downloadLabel"
-  ></D3BarChart>
+  <D3BarChart :config="config" :datum="datum" :height="height"></D3BarChart>
 </template>
 
 <script>

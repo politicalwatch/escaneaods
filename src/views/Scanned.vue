@@ -16,7 +16,7 @@
             </div>
           </div>
 
-          <scanner-visualizations :result="result"></scanner-visualizations>
+          <scanner-visualizations :result="result" />
 
           <!-- Begin CTAs -->
           <div
@@ -33,8 +33,9 @@
               <router-link
                 :to="{ name: 'scanner' }"
                 class="c-button c-button--primary"
-                >Escanear</router-link
               >
+                Escanear
+              </router-link>
             </div>
           </div>
           <!-- End CTAs -->

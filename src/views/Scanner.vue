@@ -69,13 +69,13 @@
           />
         </div>
         <div class="o-grid__col u-12 result" v-if="result">
-          <tipi-message v-if="!result.topics.length" type="error" icon
-            >No hemos encontrado ninguna coincidencia entre tu texto y nuestras
-            etiquetas.</tipi-message
-          >
+          <tipi-message v-if="!result.topics.length" type="error" icon>
+            No hemos encontrado ninguna coincidencia entre tu texto y nuestras
+            etiquetas.
+          </tipi-message>
 
           <div v-else>
-            <scanner-visualizations :result="result"></scanner-visualizations>
+            <scanner-visualizations :result="result" />
           </div>
 
           <!-- Begin CTAs -->
@@ -235,7 +235,12 @@ export default {
           }
 
           api
-            .saveScanned(value.name, value.expiry, this.excerptText, result)
+            .saveScanned(
+              value.name,
+              value.expiry,
+              this.excerptText,
+              this.result
+            )
             .then((response) => {
               Swal.fire({
                 title: 'Guardado!',

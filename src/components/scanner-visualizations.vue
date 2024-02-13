@@ -1,83 +1,32 @@
 <template>
-  <div>
-    <div>
+  <div class="o-grid">
+    <div class="o-grid__col u-12">
       <h5>Distribución de los resultados:</h5>
-
-      <div class="o-grid">
-        <div class="o-grid__col u-12 u-6@sm">
-          <ScannerLegend
-            :result="result"
-            :isFirst="true"
-            :styles="styles"
-          ></ScannerLegend>
-        </div>
-        <div class="o-grid__col u-12 u-6@sm">
-          <ScannerLegend
-            :result="result"
-            :isFirst="false"
-            :styles="styles"
-          ></ScannerLegend>
-        </div>
-        <div class="o-grid__col u-12 u-6@sm u-padding-top-4">
-          <ScannerSunburst :result="result" :styles="styles"></ScannerSunburst>
-          <tipi-message type="info" icon
-            >Puedes hacer zoom haciendo clic en cada una de las
-            porciones.</tipi-message
-          >
-        </div>
-        <div class="o-grid__col u-12 u-6@sm u-padding-top-4 u-text-center">
-          <ScannerWordsCloud
-            :result="result"
-            :maxResults="tagsInWordCloud"
-            :styles="styles"
-          ></ScannerWordsCloud>
-          <tipi-message type="info" icon
-            >Se muestran un máximo de
-            {{ tagsInWordCloud }} términos.</tipi-message
-          >
-        </div>
-      </div>
+      <scanner-list-viz-container :styles="styles" :result="result" />
     </div>
-    <div class="u-padding-top-10">
-      <h5>Compara los resultados:</h5>
-      <tipi-message type="info" icon
-        >Selecciona un texto de referencia, entre los que tenemos cargados en
-        nuestro sistema, para poder comparar con los resultados de tu texto
-        etiquetato.</tipi-message
-      >
-      <div class="c-select-label u-block">
-        <label for="topic">Comparar con...</label>
-        <multiselect
-          v-model="textToCompare"
-          :loading="isLoadingDocuments"
-          :options="compareOptions"
-          @search-change="searchDocuments"
-          name="pre-scanned-text"
-          id="pre-scanned-text"
-          placeholder="Selecciona uno"
-        >
-          <template v-slot:noOptions>Listado vacío</template>
-        </multiselect>
-      </div>
+    <div class="o-grid__col u-12 u-margin-bottom-10">
       <ScannerBarchart
         :result="this.result"
         :resultToCompare="resultToCompare"
         :styles="styles"
-      ></ScannerBarchart>
+      />
     </div>
-
-    <div class="u-padding-top-10">
+    <div v-if="result.tags.length > 15" class="o-grid__col u-12 u-text-center">
+      <ScannerWordsCloud
+        :result="result"
+        :maxResults="tagsInWordCloud"
+        :styles="styles"
+      />
+    </div>
+    <div class="o-grid__col u-12">
       <h5>Resultados detallados:</h5>
       <p v-if="result.topics.length > 9">
         Aquí solo te mostramos 10 resultados de {{ result.tags.length }}, para
         ver el resto descarga el archivo.
       </p>
-      <p v-if="result.topics.length < 9">
-        También puedes obtener los datos descargando el archivo.
-      </p>
-      <ScannerTable :result="result"></ScannerTable>
+      <p v-else>También puedes obtener los datos descargando el archivo.</p>
+      <ScannerTable :result="result" />
     </div>
-
     <div class="o-grid__col u-12 u-margin-top-4">
       <json-excel
         :data="csvItems"
@@ -101,9 +50,9 @@
           </svg>
         </span>
       </json-excel>
-      <tipi-message type="info" icon
-        >Los resultados se descargarán en formato Excel.</tipi-message
-      >
+      <tipi-message type="info" icon>
+        Los resultados se descargarán en formato Excel.
+      </tipi-message>
     </div>
   </div>
 </template>
@@ -115,6 +64,7 @@ import ScannerSunburst from '@/components/scanner-sunburst.vue';
 import ScannerBarchart from '@/components/scanner-barchart.vue';
 import ScannerTable from '@/components/scanner-table.vue';
 import ScannerLegend from '@/components/scanner-legend.vue';
+import ScannerListVizContainer from '@/components/ScannerList/ScannerListVizContainer.vue';
 import Multiselect from 'vue-multiselect';
 import preScannedTexts from '@/scanned';
 import config from '@/config';
@@ -131,6 +81,7 @@ export default {
     ScannerBarchart,
     ScannerTable,
     ScannerLegend,
+    ScannerListVizContainer,
     Multiselect,
     JsonExcel,
   },

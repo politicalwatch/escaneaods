@@ -102,7 +102,6 @@ export default {
   },
   methods: {
     cookieStatus: (val) => {
-      // console.log('Cookie status: ' + val);
       if (val === 'decline' || val == null) {
         if (gtag) {
           gtag('consent', 'default', {

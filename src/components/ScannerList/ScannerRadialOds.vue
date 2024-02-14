@@ -245,7 +245,6 @@ const arc = d3
   });
 
 function showText(d) {
-  //console.log(d);
   if (d === undefined || d.x1 === undefined || d.x0 === undefined) return false;
   return d.x1 - d.x0 > 0.2;
 }

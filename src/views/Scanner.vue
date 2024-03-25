@@ -23,36 +23,41 @@
             />
           </p>
           <div class="c-input-label c-input-label--file u-block">
-            <label for="file">Sube un archivo</label>
-            <input
-              type="file"
-              id="file"
-              name="file"
-              v-on:change="loadSelectedFile"
-              placeholder="PDF, doc o txt"
-            />
-            <small class="u-color-secondary"
-              >El peso máximo soportado de los archivos es de 20 MB.</small
-            ><br />
-            <small class="u-color-secondary"
-              >pdf, txt, doc, docx, odt, xls, xlsx, ppt, pptx, jpg, png, gif,
-              html</small
-            >
+            <label for="file"
+              >Sube un archivo
+              <input
+                type="file"
+                id="file"
+                name="file"
+                v-on:change="loadSelectedFile"
+                placeholder="PDF, doc o txt"
+              />
+              <small class="u-color-secondary"
+                >El peso máximo soportado de los archivos es de 20 MB.</small
+              ><br />
+              <small class="u-color-secondary"
+                >pdf, txt, doc, docx, odt, xls, xlsx, ppt, pptx, jpg, png, gif,
+                html</small
+              >
+            </label>
           </div>
           <p>
-            <a
+            <button
               id="start"
               class="c-button c-button--primary"
+              :disabled="!hasInput || inProgress"
               @click.prevent="annotate"
-              >Escanear</a
             >
-            <a
+              Escanear
+            </button>
+            <button
               class="c-button"
               :class="{ disabled: inProgress }"
               v-if="hasInput"
-              @click="cleanTextAndResult"
-              >Limpiar</a
+              @click.prevent="cleanTextAndResult"
             >
+              Limpiar
+            </button>
           </p>
         </div>
       </div>

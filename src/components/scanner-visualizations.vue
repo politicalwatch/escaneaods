@@ -31,7 +31,8 @@
       <json-excel
         :data="csvItems"
         id="downloadCSV"
-        type="xls"
+        type="csv"
+        :name="getNameFromCSV()"
         class="c-button c-button--icon-right c-button--primary"
       >
         Descarga tus resultados
@@ -120,6 +121,10 @@ export default {
         });
         this.isLoadingDocuments = false;
       });
+    },
+    getNameFromCSV: function () {
+      let d = new Date();
+      return 'export-' + d.toISOString() + '.csv';
     },
   },
   watch: {
